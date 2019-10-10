@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { Formik } from "formik"
 import * as Yup from "yup"
 import Layout from "../../components/layout"
-import NiceToMeet from "../../images/NiceToMeet.png"
+// import NiceToMeet from "../../images/NiceToMeet.png"
 import "../../components/layout.css"
 import ContactM from "../../components/ContactMe"
 
@@ -12,15 +12,15 @@ export class Contact extends React.Component {
     return (
       <Layout>
         <div className="d-flex justify-content-center align-items-center flex-md-column">
-          <img
+          {/* <img
             className="text-center"
             src={NiceToMeet}
             width="100%"
             alt="Card Foundation"
-          />
-          <h1 className="position-absolute text-white px-3 py-1 bg-dark">
+          /> */}
+          {/* <h1 className="position-absolute text-white px-3 py-1 bg-dark">
             Contact Us
-          </h1>
+          </h1> */}
         </div>
         <ContactM />
         <Helmet>

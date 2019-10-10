@@ -11,14 +11,14 @@ export class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <div>
+        {/* <div>
           <img
             className="text-center"
             src={NiceToMeet}
             width="100%"
             alt="Card image Foundation"
           />
-        </div>
+        </div> */}
         <ContactM />
 
         <Helmet>

@@ -6,7 +6,7 @@ class ContactM extends React.Component {
       <iframe
         src="https://synectiks-website.s3.amazonaws.com/Kontact.html"
         width="100%"
-        height="290"
+        height="450px"
       ></iframe>
     )
   }

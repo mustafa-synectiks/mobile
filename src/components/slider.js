@@ -33,7 +33,7 @@ const Slider = () => {
           <Carousel.Caption>
             <div className="clearfix">
               <a
-                href="/foundation/index.html"
+                href="/foundation"
                 className="btn text-white bg-logoblue text-uppercase btnLearn float-left"
               >
                 Learn More
@@ -51,7 +51,7 @@ const Slider = () => {
           <Carousel.Caption>
             <div className="clearfix">
               <a
-                href="/devops/index.html"
+                href="/devops"
                 className="btn text-white bg-logoblue text-uppercase btnLearn float-left"
               >
                 learn more
@@ -65,7 +65,7 @@ const Slider = () => {
           <Carousel.Caption>
             <div className="clearfix">
               {/* <a
-                href="/audit/index.html"
+                href="/audit"
                 className="btn text-white bg-logoblue text-uppercase btnLearn float-left"
               >
                 learn more
@@ -84,7 +84,7 @@ const Slider = () => {
           <Carousel.Caption>
             <div className="clearfix">
               <a
-                href="/enterprisemanagedservice/index.html"
+                href="/enterprisemanagedservice"
                 className="btn text-white bg-logoblue text-uppercase btnLearn float-left"
               >
                 learn more
@@ -92,13 +92,13 @@ const Slider = () => {
             </div>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item className="text-left">
           <img className="d-block w-100" src={s5} alt="Cloud Managed Backup" />
           <Carousel.Caption>
             <div className="clearfix">
               <a
-                href="/CloudManagedBackup/index.html"
-                className="btn text-white bg-yellow text-uppercase btnLearn float-left"
+                href="/CloudManagedBackup"
+                className="btn text-white bg-yellow text-uppercase btnLearn"
               >
                 learn more
               </a>
@@ -111,83 +111,81 @@ const Slider = () => {
       </Carousel>
       <div className="bg-lightgrey pt-1">
         <div className="text-center w-100 mb-2">
-          <h4 className="mb-1 py-1 stripfont bg-logoblue text-white">
+          <h2 className="text-light mb-1 py-1 bg-logoblue">
             ACCELERATING MULTICLOUD SOA TRANSFORMATION THROUGH OPEN PLATFORM
-          </h4>
+          </h2>
         </div>
         <div className="container">
           <div>
-            <div className="text-center w-100 py-5 mt-1 txt mt-card ">
-              <h3 className="">
-                <b>Outcome-based Solution Offerings</b>
-              </h3>
+            <div className="text-center my-sm-3 my-md-5 my-lg-5 my-xl-5  w-100">
+              <h2 className="">Outcome-based Solution Offerings</h2>
             </div>
-            <div className="row">
-              <div className="card-deck">
-                <div className="card btn col-md-4 card-shadow mx-3 pt-3">
-                  <a href="/foundation/index.html" className="noLine">
-                    <img
-                      className="card-img-top"
-                      src={OpenPlatform}
-                      alt="Foundation"
-                    />
-                    <div className="card-body">
-                      <h2 className="text-center text-uppercase">
-                        Open Platform
-                      </h2>
-                    </div>
-                  </a>
-                </div>
+            <div className="d-sm-flex justify-content-sm-between d-md-flex  justify-content-md-between d-lg-flex justify-content-lg-between d-xl-flex justify-content-xl-between">
+              <div className="card card-shadow">
+                <a href="/foundation" className="noLine">
+                  <img
+                    className="card-img-top"
+                    src={OpenPlatform}
+                    alt="Foundation"
+                  />
+                  <div className="card-body">
+                    <h3 className="text-center text-uppercase">
+                      Open Platform
+                    </h3>
+                  </div>
+                </a>
+              </div>
 
-                <div className="card btn col-md-4 card-shadow mx-3 pt-3">
-                  <a href="/transformation/index.html" className="noLine">
-                    <img
-                      className="card-img-top"
-                      src={Transformation}
-                      alt="Transformation"
-                    />
-                    <div className="card-body">
-                      <h2 className="text-center text-uppercase">
-                        Transformation
-                      </h2>
-                    </div>
-                  </a>
-                </div>
+              <div className="card card-shadow mx-sm-3 mx-md-4">
+                <a href="/transformation" className="noLine">
+                  <img
+                    className="card-img-top"
+                    src={Transformation}
+                    alt="Transformation"
+                  />
+                  <div className="card-body">
+                    <h3 className="text-center text-uppercase">
+                      Transformation
+                    </h3>
+                  </div>
+                </a>
+              </div>
 
-                <div className="card btn col-md-4 card-shadow mx-3 pt-3">
-                  <a href="/operations/index.html" className="noLine">
-                    <img
-                      className="card-img-top"
-                      src={Solutions}
-                      alt="Operation"
-                    />
-                    <div className="card-body">
-                      <h2 className="text-center text-uppercase">Solutions</h2>
-                    </div>
-                  </a>
-                </div>
+              <div className="card card-shadow">
+                <a href="/operations" className="noLine">
+                  <img
+                    className="card-img-top"
+                    src={Solutions}
+                    alt="Operation"
+                  />
+                  <div className="card-body">
+                    <h3 className="text-center text-uppercase">Solutions</h3>
+                  </div>
+                </a>
               </div>
             </div>
-            <Button
-              className="btn btn-demo noLine noLine text-white z"
-              href="/askfordemo/index.html"
-            >
-              Ask For Demo
-            </Button>
+            <div className="my-3 text-center">
+              <a
+                className="btn btn-primary noLine noLine z btn-demo"
+                href="/askfordemo"
+              >
+                Ask For Demo
+              </a>
+            </div>
           </div>
           {/* Card Ends */}
 
-          <div className="pt-5 flex-fill mt-8">
+          <div className="flex-fill my-sm-3 my-md-5 my-lg-5 my-xl-5">
             <img
               src={PoweredBySynectiks}
               width="100%"
               alt=""
               className="w-100"
             />
-            <div className="text-center text-white pt-4 ">
+            <div className="text-center text-white mt-sm-2 mt-md-3 mt-lg-3 mt-xl-3">
               <p>
                 <a
-                  href="/foundation/index.html"
+                  href="/foundation"
                   className="btn text-white bg-logoblue text-uppercase btnLearn"
                 >
                   learn more
@@ -196,18 +194,16 @@ const Slider = () => {
             </div>
           </div>
 
-          <div className="text-center w-100 pt-5 mt-1 txt mt-card ">
-            <h3 className="">
-              <b>Success Stories</b>
-            </h3>
+          <div className="text-center w-100 mb-sm-2 mb-md-3 mb-lg-3 mb-xl-3">
+            <h2 className="">Success Stories</h2>
           </div>
 
           <div
-            className="d-flex justify-content-around pt-2 flex-fill mt-2 align-items-center flex-col"
+            className="d-sm-flex justify-content-sm-between d-md-flex  justify-content-md-between d-lg-flex justify-content-lg-between d-xl-flex justify-content-xl-between"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            <a href="/softwaredefined/index.html" className="noLine w-75">
+            <a href="/softwaredefined" className="noLine">
               <div className="p-3">
                 <div className="border-grey-2px cs_boxshadow">
                   <div className="img_zoom">
@@ -218,9 +214,9 @@ const Slider = () => {
                     />
                   </div>
                   <div className="text-group p-3 align-self-center">
-                    <h4 className="font-weight-bold pt-2 text-black">
+                    <h3 className="font-weight-bold pt-2 text-black">
                       Software Defined Transformation
-                    </h4>
+                    </h3>
                     <p className="text-black">
                       Moving to AWS cloud with Data Center retirement for Motor
                       Industry.
@@ -230,7 +226,7 @@ const Slider = () => {
                 </div>
               </div>
             </a>
-            <a href="/realtime/index.html" className="noLine w-75">
+            <a href="/realtime" className="noLine">
               <div className="p-3">
                 <div className="border-grey-2px cs_boxshadow">
                   <div className="img_zoom">
@@ -241,9 +237,9 @@ const Slider = () => {
                     />{" "}
                   </div>
                   <div className="text-group p-3 align-self-center ">
-                    <h4 className="font-weight-bold pt-2 text-black">
+                    <h3 className="font-weight-bold pt-2 text-black">
                       Realtime Monitoring{" "}
-                    </h4>
+                    </h3>
                     <p className="text-black">
                       Highly Scalable extremely customizable realtime monitoring
                       platform for a large telco.
@@ -253,7 +249,7 @@ const Slider = () => {
                 </div>
               </div>
             </a>
-            <a href="/storagemigration/index.html" className="noLine w-75">
+            <a href="/storagemigration" className="noLine ">
               <div className="p-3">
                 <div className="border-grey-2px cs_boxshadow">
                   <div className="img_zoom">
@@ -264,9 +260,9 @@ const Slider = () => {
                     />{" "}
                   </div>
                   <div className="text-group p-3 align-self-center">
-                    <h4 className="font-weight-bold pt-2 text-black">
+                    <h3 className="font-weight-bold pt-2 text-black">
                       Storage Migration{" "}
-                    </h4>
+                    </h3>
                     <p className="text-black">
                       Zero downtime, Zero Fault Petabytes storage migration of
                       Largest Financial Sector.
@@ -279,20 +275,20 @@ const Slider = () => {
           </div>
 
           <div
-            className="d-flex justify-content-around pt-2 flex-fill mt-3 pb-3 align-items-center flex-col"
+            className="d-sm-flex justify-content-sm-between d-md-flex  justify-content-md-between d-lg-flex justify-content-lg-between d-xl-flex justify-content-xl-between"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            <a href="/networkdesign/index.html" className="noLine w-75">
+            <a href="/networkdesign" className="noLine w-md-75">
               <div className="p-3">
                 <div className="border-grey-2px cs_boxshadow">
                   <div className="img_zoom">
                     <img src={NetworkDesign} width="100%" alt="NetworkDesign" />{" "}
                   </div>
                   <div className="text-group p-3 align-self-center">
-                    <h4 className="font-weight-bold text-black">
+                    <h3 className="font-weight-bold text-black">
                       Network Design{" "}
-                    </h4>
+                    </h3>
                     <p className="text-black">
                       Complete Network Backbone Design with highest security for
                       retail.
@@ -302,16 +298,16 @@ const Slider = () => {
                 </div>
               </div>
             </a>
-            <a href="/storagetier/index.html" className="noLine w-75">
+            <a href="/storagetier" className="noLine w-md-75">
               <div className="p-3">
                 <div className="border-grey-2px cs_boxshadow">
                   <div className="img_zoom">
                     <img src={StorageTier} width="100%" alt="StorageTier" />{" "}
                   </div>
                   <div className="text-group p-3 align-self-center">
-                    <h4 className="font-weight-bold text-black">
+                    <h3 className="font-weight-bold text-black">
                       Storage Tier{" "}
-                    </h4>
+                    </h3>
                     <p className="text-black">
                       Moving Bigdata Workloads to aggregated platform for a
                       large telco.
@@ -321,7 +317,7 @@ const Slider = () => {
                 </div>
               </div>
             </a>
-            <a href="/disasterrecovery/index.html" className="noLine w-75">
+            <a href="/disasterrecovery" className="noLine w-md-75">
               <div className="p-3">
                 <div className="border-grey-2px cs_boxshadow">
                   <div className="img_zoom">
@@ -332,9 +328,9 @@ const Slider = () => {
                     />{" "}
                   </div>
                   <div className="text-group p-3 align-self-center">
-                    <h4 className="font-weight-bold text-black">
+                    <h3 className="font-weight-bold text-black">
                       Disaster Recovery{" "}
-                    </h4>
+                    </h3>
                     <p className="text-black">
                       Lightweight disaster recovery platform for Indian Defense.
                     </p>{" "}
