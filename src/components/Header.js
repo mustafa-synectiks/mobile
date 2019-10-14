@@ -1,104 +1,65 @@
 import React from "react"
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap"
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap"
 import { FaBars } from "react-icons/fa"
 import Topbar from "./Topbar"
-import logo from "../images/logo.png"
+import logo from "../images/synectiks.png"
 
 const z = {
   zIndex: "9999 !important",
 }
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => setIsOpen(!isOpen)
+
   return (
     <div className="FixedHeader">
       <div className="container d-flex justify-content-between mt-3">
         <div></div>
         <Topbar />
       </div>
-      <Navbar expand="lg" className="z">
-        <Container>
-          <Navbar.Brand href="/">
-            <img src={logo} alt="synectiks" />
-          </Navbar.Brand>
-          <Navbar.Toggle className="ml-auto" aria-controls="basic-navbar-nav">
-            <FaBars />
-          </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              <NavDropdown title="Transformation" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/devops/index.html">
-                  Devops Transformation
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/foundation/index.html">
-                  Foundation
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/migrations/index.html">
-                  Migrations & Optimization
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/microservices/index.html">
-                  Microservices Transformation
-                </NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Cloud" id="basic-nav-dropdown">
-                {/* <NavDropdown
-                  title="Cloud Hosted Services"
-                  id="basic-nav-dropdown"
-                  className="dropdown-submenu dropright"
-                > */}
-                <NavDropdown.Item href="/HostedInfrastructure/index.html">
-                  Hosted Infrastructure
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/CloudManagedBackup/index.html">
-                  Cloud Managed Backup
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/CloudDisasterRecovery/index.html">
-                  Cloud Disaster Recovery
-                </NavDropdown.Item>
-                {/* </NavDropdown> */}
-                <NavDropdown.Item href="/privatecloud/index.html">
-                  Private Cloud
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/hybridcloud/index.html">
-                  Hybrid Cloud
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/publiccloud/index.html">
-                  Public Cloud
-                </NavDropdown.Item>{" "}
-                <NavDropdown.Item href="/colocation/index.html">
-                  Colocation
-                </NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Services" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/applicationservices/index.html">
-                  Application Services
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/managedservices/index.html">
-                  Managed Services
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/networkservices/index.html">
-                  Network Services
-                </NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Resources" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/featured/index.html">
-                  Featured
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/casestudy/index.html">
-                  Success Stories
-                </NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Company" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/about/index.html">
-                  About
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/careers/index.html">
-                  Careers
-                </NavDropdown.Item>
-              </NavDropdown>
+      <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/components/">Components</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">
+                  GitHub
+                </NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Options
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>Option 1</DropdownItem>
+                  <DropdownItem>Option 2</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>Reset</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+          </Collapse>
+        </Navbar>
+      </div>{" "}
     </div>
   )
 }

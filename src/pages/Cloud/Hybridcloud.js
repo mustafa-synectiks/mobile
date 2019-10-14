@@ -59,6 +59,7 @@ import EX from "../../images/Experience.png"
 import EXP from "../../images/Expertise.svg"
 import TV from "../../images/tv.png"
 import APL from "../../images/aple.png"
+import USB from "../../images/usb.png"
 
 export class Hybridcloud extends React.Component {
   constructor(props) {
@@ -78,6 +79,13 @@ export class Hybridcloud extends React.Component {
   //     modal: !prevState.modal,
   //   }))
   // }
+  toggle(tab) {
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab,
+      })
+    }
+  }
   toggle(tab) {
     if (this.state.activeTab !== tab) {
       this.setState({
@@ -207,10 +215,10 @@ export class Hybridcloud extends React.Component {
             </div>
           </div>{" "}
           <div className="px-5 py-2 text-justify">
-            <h5 className="lineHeight-24 text-center">
+            {/* <h5 className="lineHeight-24 text-center">
               You can now be able to leverage some of the existing low-cost
               cloud solutions without compromising your security.
-            </h5>
+            </h5> */}
           </div>
           <div className="">
             <Row className="position-relative">
@@ -218,7 +226,7 @@ export class Hybridcloud extends React.Component {
                 <Nav vertical className="tabList">
                   <NavItem className="one">
                     <span>
-                      <img src={APL} />
+                      <img src={USB} />
                     </span>
                     <NavLink
                       id="bgL"
@@ -250,7 +258,7 @@ export class Hybridcloud extends React.Component {
                   </NavItem>
                   <NavItem className="one">
                     <span>
-                      <img src={TV} />
+                      <img src={USB} />
                     </span>
                     <NavLink
                       id="bgLLL"
@@ -301,7 +309,7 @@ export class Hybridcloud extends React.Component {
                         </div>
                       </div>
 
-                      <h2>Why Hybrid Cloud? The</h2>
+                      <h2>Why Hybrid Cloud?</h2>
                       <h3>Public, Private, and Hybrid Clouds</h3>
                       <p>
                         public cloud is what people think of when they hear the
@@ -443,8 +451,8 @@ export class Hybridcloud extends React.Component {
                         environment. Some of the key challenges are:
                       </p>
                       <div>
-                        <div className="d-flex text-center px-5">
-                          <div>
+                        <div className="row">
+                          <div className="col-sm-6 col-md-6 text-center">
                             <div>
                               <img src={WM} alt="" className="w15 m-0" />
                               <h4 className="my-3">Workload Migration</h4>
@@ -455,7 +463,7 @@ export class Hybridcloud extends React.Component {
                               applications present challenges.
                             </p>
                           </div>
-                          <div>
+                          <div className="col-sm-6 col-md-6 text-center">
                             <div>
                               <img src={IC} alt="" className="w15 m-0" />
                               <h4 className="my-4">Integrating Clouds</h4>
@@ -466,8 +474,8 @@ export class Hybridcloud extends React.Component {
                             </p>
                           </div>
                         </div>
-                        <div className="d-flex text-center px-5">
-                          <div>
+                        <div className="row">
+                          <div className="col-sm-6 col-md-6 text-center">
                             <div>
                               <img src={WC} alt="" className="w15 m-0" />
                               <h4 className="my-3">Workload Fragmentation</h4>
@@ -477,7 +485,7 @@ export class Hybridcloud extends React.Component {
                               timely manner when they are migrated.
                             </p>
                           </div>
-                          <div>
+                          <div className="col-sm-6 col-md-6 text-center">
                             <div>
                               <img src={SPRT} alt="" className="w15 m-0" />
                               <h4 className="my-3">Support & Assistance</h4>
@@ -518,19 +526,20 @@ export class Hybridcloud extends React.Component {
 
                       <div>
                         <div className="d-flex align-items-center my-3">
-                          <img src={DRB} alt="" className="w5 mr-3 my-3" />
+                          <img src={DRB} alt="" className="whbd7 mr-3 my-3" />
                           <h4>Disaster Recovery/Backup</h4>
                         </div>
-                        <p>
-                          {" "}
-                          Backup and disaster recovery is the most common use
-                          case as it serves two primary benefits. First, it
-                          allows you to use a non-production workload as a
-                          proof-of-concept for your initial entr into a cloud
-                          environment. Second, it allows you to create immediate
-                          value for your organization by elevating and testing
-                          your business continuity strategy.
-                        </p>
+                        <div>
+                          <p>
+                            Backup and disaster recovery is the most common use
+                            case as it serves two primary benefits. First, it
+                            allows you to use a non-production workload as a
+                            proof-of-concept for your initial entr into a cloud
+                            environment. Second, it allows you to create
+                            immediate value for your organization by elevating
+                            and testing your business continuity strategy.
+                          </p>
+                        </div>
                       </div>
 
                       <div className="text-center">
@@ -538,7 +547,7 @@ export class Hybridcloud extends React.Component {
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
-                          <img src={ADT} alt="" className="w5 mr-3 my-3" />
+                          <img src={ADT} alt="" className="whbd7 mr-3 my-3" />
                           <h4>Application Development and Testing</h4>
                         </div>
                         <p>
@@ -553,7 +562,7 @@ export class Hybridcloud extends React.Component {
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
-                          <img src={WS} alt="" className="w5 mr-3 my-3" />
+                          <img src={WS} alt="" className="whbd9 mr-3 my-3" />
                           <h4>Web Servers</h4>
                         </div>
                         <p>
@@ -575,7 +584,7 @@ export class Hybridcloud extends React.Component {
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
-                          <img src={ETL} alt="" className="w5 mr-3 my-3" />
+                          <img src={ETL} alt="" className="whbd7 mr-3 my-3" />
                           <h4>
                             Data Extract, Transform, and Load (ETL) processes
                           </h4>
@@ -590,7 +599,7 @@ export class Hybridcloud extends React.Component {
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
-                          <img src={HRP} alt="" className="w5 mr-3 my-3" />
+                          <img src={HRP} alt="" className="whbd9 mr-3 my-3" />
                           <h4>HR, Payroll, Productivity Applications</h4>
                         </div>
                         <p>
@@ -624,7 +633,7 @@ export class Hybridcloud extends React.Component {
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
-                          <img src={SLDR} alt="" className="w5 mr-3 my-3" />
+                          <img src={SLDR} alt="" className="whbd7 mr-3 my-3" />
                           <h4>Supporting Local Data Regulations</h4>
                         </div>
                         <p>
@@ -643,7 +652,7 @@ export class Hybridcloud extends React.Component {
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
-                          <img src={GGEC} alt="" className="w5 mr-3 my-3" />
+                          <img src={GGEC} alt="" className="whbd9 mr-3 my-3" />
                           <h4>Go Global and edge computing </h4>
                         </div>
                         <p>
@@ -696,136 +705,153 @@ export class Hybridcloud extends React.Component {
                           are several key actions to take:
                         </p>
                       </div>
-                      <div>
-                        <div className="d-flex align-items-center">
-                          <img src={ECC} alt="" className="w5 mr-3 my-3" />
+                      <div className="row">
+                        <div className="col-sm-4 col-md-4 text-center">
+                          <img src={ECC} alt="" className="w-22" />
                           <h4>Embrace Cultural Changes</h4>
                         </div>
-                        <p>
-                          As the organization start embracing hybrid cloud and
-                          take benefits of Serverless, PaaS, IoT and edge
-                          computing, so the workforce should become more
-                          integrated, multifunctional, flexible and agile.
-                          Existing and new IT stuffs must adept cloud
-                          technologies, agile methodologies so that they can
-                          build, deploy and scale applications across multiple
-                          infrastructure environments using Agile and DevOps
-                          processes. Most importantly companies need to foster a
-                          culture of learning at scale.
-                        </p>
+                        <div className="col-sm-8 col-md-8">
+                          <p>
+                            As the organization start embracing hybrid cloud and
+                            take benefits of Serverless, PaaS, IoT and edge
+                            computing, so the workforce should become more
+                            integrated, multifunctional, flexible and agile.
+                            Existing and new IT stuffs must adept cloud
+                            technologies, agile methodologies so that they can
+                            build, deploy and scale applications across multiple
+                            infrastructure environments using Agile and DevOps
+                            processes. Most importantly companies need to foster
+                            a culture of learning at scale.
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <div className="d-flex align-items-center">
-                          <img src={RCM} alt="" className="w5 mr-3 my-3" />
+                      <div className="row">
+                        <div className="col-sm-4 col-md-4 text-center">
+                          <img src={RCM} alt="" className="w-25" />
                           <h4>Revamp change management</h4>
                         </div>
-                        <p>
-                          The existing governance processes, gates and approval
-                          procedures designed for traditional legacy IT
-                          environments are no longer appropriate in a cloud
-                          environment. Companies should revamp their change
-                          management systems to allow changes to happen quickly
-                          and, using automated workflows, to reduce manual
-                          intervention.
-                        </p>
+                        <div class="col-ms-8 col-md-8">
+                          <p>
+                            The existing governance processes, gates and
+                            approval procedures designed for traditional legacy
+                            IT environments are no longer appropriate in a cloud
+                            environment. Companies should revamp their change
+                            management systems to allow changes to happen
+                            quickly and, using automated workflows, to reduce
+                            manual intervention.
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <div className="d-flex align-items-center">
-                          <img src={ICO} alt="" className="w5 mr-3 my-3" />
+                      <div className="row">
+                        <div className="col-sm-4 col-md-4 text-center">
+                          <img src={ICO} alt="" className="w-22" />
                           <h4>Integrate cloud operations</h4>
                         </div>
-                        <p>
-                          As organizations move workloads to the cloud, the IT
-                          operations function should adapt to manage both
-                          on-premises and cloud-based applications. This new
-                          model, called CloudOps, can provide continuous
-                          integrated operations in a multi-cloud environment to
-                          enable rapid response to events, incidents and
-                          requests. Adding DevOps to the mix then utilizes
-                          automation, integration and organizational change to
-                          enable more frequent enhancements that result in
-                          higher quality software.
-                        </p>
+                        <div class="col-ms-8 col-md-8">
+                          <p>
+                            As organizations move workloads to the cloud, the IT
+                            operations function should adapt to manage both
+                            on-premises and cloud-based applications. This new
+                            model, called CloudOps, can provide continuous
+                            integrated operations in a multi-cloud environment
+                            to enable rapid response to events, incidents and
+                            requests. Adding DevOps to the mix then utilizes
+                            automation, integration and organizational change to
+                            enable more frequent enhancements that result in
+                            higher quality software.
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <div className="d-flex align-items-center">
-                          <img src={AS} alt="" className="w5 mr-3 my-3" />
+                      <div className="row">
+                        <div className="col-sm-4 col-md-4 text-center">
+                          <img src={AS} alt="" className="w-22" />
                           <h4>Automate support</h4>
                         </div>
-                        <p>
-                          To the extent possible, automate IT support functions.
-                          For example, the traditional trouble ticket system can
-                          be manually intensive and inefficient. Automation can
-                          improve service and free up IT personnel for
-                          higher-level activities. Longer term, companies will
-                          be able to deploy machine learning and AI to take log
-                          data from cloud-based systems and automatically take
-                          actions to resolve or even prevent incidents. The idea
-                          is to learn once, fix with code and share learnings to
-                          improve code over time and scale knowledge.
-                        </p>
+                        <div class="col-sm-8 col-md-8">
+                          <p>
+                            To the extent possible, automate IT support
+                            functions. For example, the traditional trouble
+                            ticket system can be manually intensive and
+                            inefficient. Automation can improve service and free
+                            up IT personnel for higher-level activities. Longer
+                            term, companies will be able to deploy machine
+                            learning and AI to take log data from cloud-based
+                            systems and automatically take actions to resolve or
+                            even prevent incidents. The idea is to learn once,
+                            fix with code and share learnings to improve code
+                            over time and scale knowledge.
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <div className="d-flex align-items-center">
-                          <img src={ST} alt="" className="w5 mr-3 my-3" />
+                      <div className="row">
+                        <div className="col-sm-4 col-md-4 text-center">
+                          <img src={ST} alt="" className="w-22" />
                           <h4>Manage “shadow IT”</h4>
                         </div>
-                        <p>
-                          Business units are often acquiring the cloud services
-                          they need because IT moves too slowly. At some point,
-                          those services must be integrated back into the
-                          traditional IT environment for operational and
-                          security reasons through a services governance model
-                          that encompasses hybrid IT elements. In addition, it’s
-                          important for CIOs to have a handle on what the
-                          enterprise is spending on IT services. The only way to
-                          accomplish this is to adopt hybrid IT and demonstrate
-                          to business units that IT can support the pace and
-                          scale that the business requires.
-                        </p>
+                        <div class="col-sm-8 col-md-8">
+                          <p>
+                            Business units are often acquiring the cloud
+                            services they need because IT moves too slowly. At
+                            some point, those services must be integrated back
+                            into the traditional IT environment for operational
+                            and security reasons through a services governance
+                            model that encompasses hybrid IT elements. In
+                            addition, it’s important for CIOs to have a handle
+                            on what the enterprise is spending on IT services.
+                            The only way to accomplish this is to adopt hybrid
+                            IT and demonstrate to business units that IT can
+                            support the pace and scale that the business
+                            requires.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </TabPane>
                   <TabPane tabId="3">
                     <div>
-                      <p>
+                      <p className="py-4">
                         Synectiks can enable your enterprise journey to hybrid
                         IT, regardless of your starting point.
                       </p>
-                      <div>
-                        <div className="d-flex align-items-center">
-                          <img src={ST} alt="" className="w5 mr-3 my-3" />
+                      <div className="row my-5">
+                        <div className="col-md-4 text-center">
+                          <img src={ST} alt="" className="w-25 mt-n5" />
                           <h4>Discovery & Assessment</h4>
                         </div>
-                        <p>
-                          Our discovery and assessment services can help you
-                          draft a hybrid IT roadmap with a clearly defined
-                          business case and prioritized recommendations by
-                          workload or accelerate efforts already underway. Our
-                          recommendations reflect deep industry knowledge and
-                          contextual knowledge about your business.
-                        </p>
+                        <div className="col-md-8">
+                          <p>
+                            Our discovery and assessment services can help you
+                            draft a hybrid IT roadmap with a clearly defined
+                            business case and prioritized recommendations by
+                            workload or accelerate efforts already underway. Our
+                            recommendations reflect deep industry knowledge and
+                            contextual knowledge about your business.
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <div className="d-flex align-items-center">
-                          <img src={TS} alt="" className="w5 mr-3 my-3" />
+                      <div className="row">
+                        <div className="col-md-4 text-center">
+                          <img src={TS} alt="" className="w-25 mt-3" />
                           <h4>Transformation Services</h4>
                         </div>
-                        <p>
-                          You can access our open Xformation platform products
-                          and resource teams to adopt change quickly — from
-                          application migration, transformation and integration
-                          to cloud-native apps development, containerization,
-                          platform services and microservices — to enable your
-                          enterprise to thrive in public and virtual private
-                          environments. Synectiks xformation platform coupled
-                          with its Hybrid cross cloud infrastructure delivers
-                          you the maximum flexibility to run/move your high
-                          performant workloads across clouds and manage them
-                          through a single pane of glass.
-                        </p>
+                        <div className="col-md-8">
+                          <p>
+                            You can access our open Xformation platform products
+                            and resource teams to adopt change quickly — from
+                            application migration, transformation and
+                            integration to cloud-native apps development,
+                            containerization, platform services and
+                            microservices — to enable your enterprise to thrive
+                            in public and virtual private environments.
+                            Synectiks xformation platform coupled with its
+                            Hybrid cross cloud infrastructure delivers you the
+                            maximum flexibility to run/move your high performant
+                            workloads across clouds and manage them through a
+                            single pane of glass.
+                          </p>
+                        </div>
                       </div>
-                      <blockquote className="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                      <blockquote className="blockquote blockquote-custom bg-white p-5 shadow rounded my-5">
                         <div className="blockquote-custom-icon bg-info shadow-sm">
                           <i className="fa fa-quote-left text-white"></i>
                         </div>
@@ -844,7 +870,7 @@ export class Hybridcloud extends React.Component {
                           </cite>
                         </footer>
                       </blockquote>
-                      <div>
+                      <div className="my-3">
                         <h3>
                           <b>Synectiks</b> Differentiator
                         </h3>
@@ -858,18 +884,19 @@ export class Hybridcloud extends React.Component {
                           Cloud Partner:
                         </h4>
                       </div>
-                      <div>
-                        <div className="d-flex text-center px-5">
-                          <div>
+
+                      <div className="my-4">
+                        <div className="row">
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={EX} alt="" className="w15 m-0" />
+                              <img src={EX} alt="" className="tw m-0" />
                               <h4 className="my-3">Experience</h4>
                             </div>
                             <p> 10+ Large Scale Hybrid Cloud Transformation</p>
                           </div>
-                          <div>
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={EXP} alt="" className="w15 m-0" />
+                              <img src={EXP} alt="" className="tw m-0" />
                               <h4 className="my-4">Expertise</h4>
                             </div>
                             <p>
@@ -878,13 +905,9 @@ export class Hybridcloud extends React.Component {
                               Capabilities
                             </p>
                           </div>
-                        </div>
-                      </div>
-                      <div>
-                        <div className="d-flex text-center px-5">
-                          <div>
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={TM} alt="" className="w15 m-0" />
+                              <img src={TM} alt="" className="tw m-0" />
                               <h4 className="my-3">Time & Money</h4>
                             </div>
                             <p>
@@ -894,9 +917,13 @@ export class Hybridcloud extends React.Component {
                               orchestrate cross cloud services @50% time & cost.
                             </p>
                           </div>
-                          <div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="row">
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={EE} alt="" className="w15 m-0" />
+                              <img src={EE} alt="" className="tw m-0" />
                               <h4 className="my-4">E2E Solution</h4>
                             </div>
                             <p>
@@ -905,20 +932,16 @@ export class Hybridcloud extends React.Component {
                               Apps services.
                             </p>
                           </div>
-                        </div>
-                      </div>
-                      <div>
-                        <div className="d-flex text-center px-5">
-                          <div>
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={SCP} alt="" className="w15 m-0" />
+                              <img src={SCP} alt="" className="tw m-0" />
                               <h4 className="my-3">Single Control plane</h4>
                             </div>
                             <p> 10+ Large Scale Hybrid Cloud Transformation</p>
                           </div>
-                          <div>
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={CS} alt="" className="w15 m-0" />
+                              <img src={CS} alt="" className="tw m-0" />
                               <h4 className="my-4">Compliance & Security</h4>
                             </div>
                             <p>
@@ -929,11 +952,12 @@ export class Hybridcloud extends React.Component {
                           </div>
                         </div>
                       </div>
+
                       <div>
-                        <div className="d-flex text-center px-5">
-                          <div>
+                        <div className="row">
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={EA} alt="" className="w15 m-0" />
+                              <img src={EA} alt="" className="tw m-0" />
                               <h4 className="my-3">Extreme Automation</h4>
                             </div>
                             <p>
@@ -943,9 +967,9 @@ export class Hybridcloud extends React.Component {
                               hybrid IT environment.
                             </p>
                           </div>
-                          <div>
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={PCP} alt="" className="w15 m-0" />
+                              <img src={PCP} alt="" className="tw m-0" />
                               <h4 className="my-4">Public Cloud Partnership</h4>
                             </div>
                             <p>
@@ -953,25 +977,29 @@ export class Hybridcloud extends React.Component {
                               providers help you to get support at every stage.
                             </p>
                           </div>
+                          <div className="col-sm-4 col-md-4 text-center">
+                            <div className="d-flex text-center px-5">
+                              <div>
+                                <div>
+                                  <img src={DE} alt="" className="tw m-0" />
+                                  <h4 className="my-3">Demo Environment</h4>
+                                </div>
+                                <p>
+                                  Avail the opportunity to quickly create demo
+                                  hybrid cloud setup in our existing hybrid IT
+                                  environment and testify you key business use
+                                  cases.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div>
-                        <div className="d-flex text-center px-5">
-                          <div>
+                      <div className="mb-4">
+                        <div className="row">
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={DE} alt="" className="w15 m-0" />
-                              <h4 className="my-3">Demo Environment</h4>
-                            </div>
-                            <p>
-                              Avail the opportunity to quickly create demo
-                              hybrid cloud setup in our existing hybrid IT
-                              environment and testify you key business use
-                              cases.
-                            </p>
-                          </div>
-                          <div>
-                            <div>
-                              <img src={WO} alt="" className="w15 m-0" />
+                              <img src={WO} alt="" className="tw m-0" />
                               <h4 className="my-4">Optimization Service</h4>
                             </div>
                             <p>
@@ -979,13 +1007,9 @@ export class Hybridcloud extends React.Component {
                               clouds.
                             </p>
                           </div>
-                        </div>
-                      </div>
-                      <div>
-                        <div className="d-flex text-center px-5">
-                          <div>
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={EM} alt="" className="w15 m-0" />
+                              <img src={EM} alt="" className="tw m-0" />
                               <h4 className="my-3">Engagement Model</h4>
                             </div>
                             <p>
@@ -993,9 +1017,9 @@ export class Hybridcloud extends React.Component {
                               dependency
                             </p>
                           </div>
-                          <div>
+                          <div className="col-sm-4 col-md-4 text-center">
                             <div>
-                              <img src={LTR} alt="" className="w15 m-0" />
+                              <img src={LTR} alt="" className="tw m-0" />
                               <h4 className="my-4">Long Term Retention</h4>
                             </div>
                             <p>100% Customer Retention Rate.</p>

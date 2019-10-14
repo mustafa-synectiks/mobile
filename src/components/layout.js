@@ -12,14 +12,28 @@ const Layout = ({ children }) => {
     //     })
     //   })
 
-    $(document).ready(function($) {
-      var path = window.location.href // because the 'href' property of the DOM element is the absolute path
-      $("ul a").each(function() {
-        if (this.href === path) {
+    $(
+      "#basicnavdropdown .dropdown.navItem>a.dropdownToggle.navLink>.dropdownMenu>.dropdownItem"
+    )
+      .find("a")
+      .each(function() {
+        if (document.location.href == $(this).attr("href")) {
+          $(this)
+            .parents()
+            .addClass("active")
           $(this).addClass("active")
+          // add class as you need ul or li or a
         }
       })
-    })
+
+    // $(document).ready(function($) {
+    //   var path = window.location.href // because the 'href' property of the DOM element is the absolute path
+    //   $("#basicnavbarnav ul a").each(function() {
+    //     if (this.href === path) {
+    //       $(this).addClass("active")
+    //     }
+    //   })
+    // })
 
     // $(document).ready(function() {
     //   $(".dropdown-item").on("click", function() {

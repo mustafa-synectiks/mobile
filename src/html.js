@@ -42,6 +42,8 @@ export default function HTML(props) {
           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
           crossOrigin="anonymous"
         />
+
+        <script src="https://synectiks-website.s3.amazonaws.com/validation.js" />
         {/* <!-- Bootstrap --> */}
         {props.headComponents}
       </head>

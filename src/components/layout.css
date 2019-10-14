@@ -31,8 +31,8 @@ a.dropdown-toggle.nav-link {
 }
 a.dropdown-toggle.nav-link {
   color: #007cc2 !important;
-  margin-left: 2rem;
-  font-size: 1.3rem;
+  margin-left: 1rem;
+  font-size: 1rem;
 }
 .FixedHeader {
   position: fixed;
@@ -1869,30 +1869,21 @@ textarea.has-error {
 .tablist {
   background-color: white;
 }
-.one::before {
-  background-color: #fe5000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0);
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  width: 0;
-  top: 0;
-  transition: all 300ms ease-in-out;
-  z-index: 1;
-}
+
 .tab-content {
   padding-left: 7rem;
   padding-right: 3rem;
   text-align: justify;
+}
+.one:hover {
+  border-left: 5px solid #007cc2 !important;
 }
 .one {
   z-index: 99999;
   display: flex;
   background: white;
   box-shadow: 5px 5px 5px lightgray;
-  padding: 16px 0px 16px 20px;
+  padding: 15px 0px 10px 20px;
   border-bottom: 1px solid lightgrey;
 }
 /* .one:hover {
@@ -1903,10 +1894,12 @@ ul.tabList.nav.flex-column > li > a {
   color: rgba(0, 0, 0, 0);
   height: 10vh;
   transition: all 500ms ease-in;
-  font-size: 14px;
+  font-size: 12px;
+  cursor: pointer;
+  padding-left: 2.5rem;
 }
 ul.tabList.nav.flex-column:hover > li > a {
-  width: 320px;
+  width: 170px;
   color: rgba(0, 0, 0, 1);
 }
 ul.tabList.nav.flex-column {
@@ -1914,7 +1907,7 @@ ul.tabList.nav.flex-column {
   z-index: 99999;
   width: 51px;
   left: 0rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .himage {
@@ -1929,38 +1922,59 @@ ul.tabList.nav.flex-column {
   overflow: visible;
 }
 a#bgL:hover {
-  border-left: 5px solid orange;
-  margin: 0 -90px;
-  padding-left: 6rem !important;
+  /* border-right: 5px solid #007cc2; */
+  /* margin: 0 -90px; */
+  padding-left: 2.5rem !important;
   /* background: white !important; */
 }
 a#bgLL:hover {
-  border-left: 5px solid orange;
-  margin: 0 -90px;
-  padding-left: 6rem !important;
+  /* border-right: 5px solid #007cc2; */
+  padding-left: 2.5rem !important;
   /* background: white !important; */
 }
 a#bgLLL:hover {
-  border-left: 5px solid orange;
-  margin: 0 -90px;
-  padding-left: 6rem !important;
-  /* background: white !important; */
+  /* border-right: 5px solid #007cc2; */
+  padding-left: 2.5rem !important;
 }
 a#bgL.active {
-  border-left: 5px solid orange;
-  margin: 0 -90px;
-  padding-left: 6rem !important;
+  border-right: 5px solid #007cc2;
+  padding-left: 2.5rem !important;
   background: white !important;
 }
 a#bgLL.active {
-  border-left: 5px solid orange;
-  margin: 0 -90px;
-  padding-left: 6rem !important;
+  border-right: 5px solid #007cc2;
+  padding-left: 2.5rem !important;
   background: white !important;
 }
 a#bgLLL.active {
-  border-left: 5px solid orange;
-  margin: 0 -90px;
-  padding-left: 6rem !important;
+  border-right: 5px solid #007cc2;
+  padding-left: 2.5rem !important;
   background: white !important;
+}
+.one > span > img {
+  margin-right: -40px !important;
+  width: 55px !important;
+}
+.tw {
+  width: 22% !important;
+}
+.w-22 {
+  width: 22%;
+}
+.whbd7 {
+  width: 7%;
+}
+.whbd9 {
+  width: 9%;
+}
+.dropdown.nav-item
+  > a.dropdown-toggle.nav-link
+  > .dropdown-menu
+  > .dropdown-item.active {
+  background-color: #000 !important;
+  color: white !important;
+}
+.active {
+  background-color: #000 !important;
+  color: white !important;
 }

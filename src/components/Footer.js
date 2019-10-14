@@ -1,5 +1,8 @@
 import React from "react"
 import foot from "../css/footer.css"
+const wt = {
+  color: "white !important",
+}
 
 export class Footer extends React.Component {
   render() {
