@@ -25,10 +25,10 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-s3`,
-     options: {
-        bucketName: "gatsby-synectiks",
+      options: {
+        bucketName: "synectiks-latest-website",
         protocol: "https",
-        hostname: "techcraft.synectiks.com",
+        hostname: "synectiks.com",
       },
     },
 

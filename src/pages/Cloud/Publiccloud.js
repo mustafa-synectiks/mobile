@@ -79,8 +79,8 @@ export class Publiccloud extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="bg-lightgrey">
-          <div className=" text-black w-100 container-fluidtext-white px-5 flex-col d-flex text-justify">
+        <div className="bg-lightgrey container">
+          <div className=" text-black w-100 container-fluidtext-white flex-col d-flex text-justify">
             <div className="mt-2 pt-3 text-black">
               <div className="d-flex">
                 <h1>CLOUD&nbsp; &#8208;</h1>
@@ -123,57 +123,8 @@ export class Publiccloud extends React.Component {
             </div>
           </div>
 
-          <div className=" bg-white d-flex justify-content-around align-items-center px-2 flex-col text-center col-lg-12">
-            <div className="py-3 col-md-2 nav-item dropdown">
-              <a
-                href="/HostedInfrastructure/index.html"
-                className="text-logoblue bg-white noLine"
-              >
-                <a className="noLine" href="#" id="" data-toggle="dropdown">
-                  <b className="text-logoblue">
-                    Cloud&nbsp;Hosted&nbsp;Services&nbsp;&#9660;
-                  </b>
-                </a>
-                <div className="dropdown-menu w17em">
-                  <a
-                    className="dropdown-item"
-                    href="/HostedInfrastructure/index.html"
-                  >
-                    Hosted Infrastructure
-                  </a>
-                  <a
-                    className="dropdown-item"
-                    href="/CloudManagedBackup/index.html"
-                  >
-                    Cloud Managed Backup
-                  </a>
-                  <a
-                    className="dropdown-item"
-                    href="/CloudDisasterRecovery/index.html"
-                  >
-                    Cloud Disaster Recovery
-                  </a>
-                </div>
-              </a>
-            </div>
-
-            <div className="py-3 col-md-2">
-              <a
-                href="/privatecloud/index.html"
-                className="text-logoblue bg-white noLine"
-              >
-                <b>Private Cloud</b>
-              </a>
-            </div>
-            <div className="py-3 col-md-2">
-              <a
-                href="/hybridcloud/index.html"
-                className="text-logoblue bg-white noLine"
-              >
-                <b>Hybrid Cloud</b>
-              </a>
-            </div>
-            <div className="py-3 col-md-2 bg-logoblue brdr025">
+          <div className=" bg-white d-flex justify-content-start align-items-center px-0 flex-col text-center col-lg-6">
+            <div className="py-3 col-md-6 bg-logoblue brdr025 arrrow dd-arrow">
               <a
                 href="/publiccloud/index.html"
                 id="public"
@@ -182,17 +133,26 @@ export class Publiccloud extends React.Component {
                 Public Cloud
               </a>
             </div>
-            <div className="py-3 col-md-2">
+            <div className="py-3 col-md-6">
+              <a
+                href="/hybridcloud/index.html"
+                className="text-logoblue bg-white noLine"
+              >
+                <b>Hybrid Cloud</b>
+              </a>
+            </div>
+
+            {/* <div className="py-3 col-md-2">
               <a
                 href="/colocation/index.html"
                 className="text-logoblue bg-white noLine"
               >
                 <b>Colocation</b>
               </a>
-            </div>
+            </div> */}
           </div>
 
-          <div className="text-black w-100 mt-3 px-5 py-3 flex-col d-flex text-justify">
+          <div className="text-black w-100 mt-3 px-2 py-3 flex-col d-flex text-justify">
             <div className="w-100">
               <img
                 height="auto"
@@ -202,7 +162,7 @@ export class Publiccloud extends React.Component {
                 alt="Public Cloud"
               />
             </div>
-            <div className="w-100 px-5 text-black">
+            <div className="w-100 px-3 text-black">
               <h2>Public Cloud</h2>
               <p className="lineHeight-24">
                 Our focus is on serving our customers, leverage the ability of
@@ -220,7 +180,7 @@ export class Publiccloud extends React.Component {
           </div>
 
           <div
-            className=" text-black w-100 mt-3 px-5 py-2 flex-col d-flex text-justify"
+            className=" text-black w-100 mt-3 px-2 py-2 flex-col d-flex text-justify"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
@@ -246,7 +206,7 @@ export class Publiccloud extends React.Component {
                 <br />{" "}
               </p>
             </div>
-            <div className="px-5">
+            <div className="px-2">
               <img
                 height="auto"
                 width="100%"
@@ -257,7 +217,7 @@ export class Publiccloud extends React.Component {
             </div>
           </div>
           <div
-            className="w-100 px-5 text-black text-justify"
+            className="w-100 px-3 text-black text-justify"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
@@ -278,7 +238,7 @@ export class Publiccloud extends React.Component {
             <p>
               <a
                 className="navlink navfont noLine text-logoblue cursPoint"
-                onClick={this.toggle}
+                href="https://synectiks.com/contactus/index.html"
               >
                 <small>Contact&nbsp;Us&nbsp;</small>
               </a>
@@ -294,7 +254,7 @@ export class Publiccloud extends React.Component {
           </div>
 
           <div
-            className=" text-black w-100 mt-3 text-white px-5 py-2 flex-col d-flex text-justify"
+            className=" text-black w-100 mt-3 text-white px-3 py-2 flex-col d-flex text-justify"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
@@ -336,7 +296,7 @@ export class Publiccloud extends React.Component {
                 Azure.
               </p>
             </div>
-            <div className=" px-5">
+            <div className=" px-2">
               <img
                 height="auto"
                 width="100%"

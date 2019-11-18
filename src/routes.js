@@ -13,10 +13,6 @@ module.exports = [
     component: path.resolve(`src/pages/Formation/Devops.js`),
   },
   {
-    path: "/privacypolicy/index.html",
-    component: path.resolve(`src/pages/Mails/privacypolicy.js`),
-  },
-  {
     path: "/foundation/index.html",
     component: path.resolve(`src/pages/Formation/Foundation.js`),
   },

@@ -60,6 +60,7 @@ typings/
 # Mac files
 .DS_Store
 public
+node_modules
 
 # Yarn
 yarn-error.log

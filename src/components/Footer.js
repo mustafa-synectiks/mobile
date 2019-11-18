@@ -8,7 +8,7 @@ export class Footer extends React.Component {
   render() {
     return (
       <div>
-        <div className="text-center text-light fixed-bottom bg-logoblue content">
+        <div className="text-center text-light fixed-bottom bg-primary content">
           <button
             className=" bg-logoblue text-light  fa fa-times float-right"
             type="submit"

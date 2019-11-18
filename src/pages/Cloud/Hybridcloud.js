@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Helmet } from "react-helmet"
-import { Modal, ModalHeader, ModalBody } from "reactstrap"
-import ModalContact from "../../components/ModalContact"
-import { FiAlignLeft } from "react-icons/fi"
+// import { Modal, ModalHeader, ModalBody } from "reactstrap"
+// import ModalContact from "../../components/ModalContact"
+// import { FiAlignLeft } from "react-icons/fi"
 import Layout from "../../components/layout"
 import CloudCommon from "../../images/CloudCommon.png"
 import HybridCloud from "../../images/HybridCloud.jpg"
@@ -12,10 +12,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Card,
-  Button,
-  CardTitle,
-  CardText,
   Row,
   Col,
 } from "reactstrap"
@@ -30,7 +26,7 @@ import WC from "../../images/Workloadfragmentation.png"
 import SPRT from "../../images/Supportassistance.png"
 import DRB from "../../images/disasterrecovery.png"
 import scr from "../../images/Screenshot_3.png"
-import scrs from "../../images/Screenshot_4.png"
+// import scrs from "../../images/Screenshot_4.png"
 import WS from "../../images/Webserver.png"
 import ETL from "../../images/dataextraction.png"
 import HRP from "../../images/Hrppayroll.png"
@@ -57,34 +53,21 @@ import TM from "../../images/money-stack-and-sand-clock.svg"
 import EE from "../../images/E2e.svg"
 import EX from "../../images/Experience.png"
 import EXP from "../../images/Expertise.svg"
-import TV from "../../images/tv.png"
-import APL from "../../images/aple.png"
-import USB from "../../images/usb.png"
+import GSHC from "../../images/GettingStartedwithHybridCloud.png"
+import HSCH from "../../images/HowSynectiksCanhelp.png"
+import SD from "../../images/SynectiksDifferentiator.png"
+import UHC from "../../images/UnderstandingHybridCloud.png"
 
 export class Hybridcloud extends React.Component {
   constructor(props) {
     super(props)
-
     this.state = {
       modal: false,
       fields: {},
       errors: {},
       activeTab: "1",
     }
-
     this.toggle = this.toggle.bind(this)
-  }
-  // toggle(Model) {
-  //   this.setState(prevState => ({
-  //     modal: !prevState.modal,
-  //   }))
-  // }
-  toggle(tab) {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab,
-      })
-    }
   }
   toggle(tab) {
     if (this.state.activeTab !== tab) {
@@ -100,8 +83,8 @@ export class Hybridcloud extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="bg-lightgrey">
-          <div className=" text-black w-100 container-fluid text-white px-5 flex-col d-flex text-justify">
+        <div className="bg-lightgrey container">
+          <div className=" text-black w-100 text-white flex-col d-flex text-justify">
             <div className="mt-2 pt-3 text-black">
               <div className="d-flex">
                 <h1>CLOUD&nbsp; &#8208;</h1>
@@ -143,61 +126,10 @@ export class Hybridcloud extends React.Component {
               />
             </div>
           </div>
-          <div className=" bg-white d-flex justify-content-around align-items-center px-2 flex-col text-center col-lg-12">
-            <div className="py-3 col-md-2 nav-item dropdown">
-              <a
-                href="/HostedInfrastructure/index.html"
-                className="text-black bg-white noLine"
-              >
-                <a className="noLine" href="#" id="" data-toggle="dropdown">
-                  <b className="text-logoblue">
-                    Cloud&nbsp;Hosted&nbsp;Services&nbsp;&#9660;
-                  </b>
-                </a>
-                <div className="dropdown-menu w17em">
-                  <a
-                    className="dropdown-item"
-                    href="/HostedInfrastructure/index.html"
-                  >
-                    {" "}
-                    Hosted Infrastructure{" "}
-                  </a>
-                  <a
-                    className="dropdown-item"
-                    href="/CloudManagedBackup/index.html"
-                  >
-                    {" "}
-                    Cloud Managed Backup{" "}
-                  </a>
-                  <a
-                    className="dropdown-item"
-                    href="/CloudDisasterRecovery/index.html"
-                  >
-                    {" "}
-                    Cloud Disaster Recovery{" "}
-                  </a>
-                </div>
-              </a>
-            </div>
-
-            <div className="py-3 col-md-2">
-              <a
-                href="/privatecloud/index.html"
-                className="text-logoblue bg-white noLine"
-              >
-                <b>Private Cloud</b>
-              </a>
-            </div>
-            <div className="py-3 col-md-2 bg-logoblue brdr025">
-              <a
-                href="/hybridcloud/index.html"
-                id="hybrid"
-                className="text-white noLine"
-              >
-                Hybrid Cloud
-              </a>
-            </div>
-            <div className="py-3 col-md-2">
+        </div>
+        <div className="container">
+          <div className=" bg-white d-flex justify-content-start align-items-center px-0 flex-col text-center col-md-6">
+            <div className="py-3 col-md-6">
               <a
                 href="/publiccloud/index.html"
                 className="text-logoblue bg-white noLine"
@@ -205,28 +137,26 @@ export class Hybridcloud extends React.Component {
                 <b>Public Cloud</b>
               </a>
             </div>
-            <div className="py-3 col-md-2">
+            <div className="py-3 col-md-6 bg-logoblue brdr025">
               <a
-                href="/colocation/index.html"
-                className="text-logoblue bg-white noLine"
+                href="/hybridcloud/index.html"
+                id="hybrid"
+                className="text-white noLine arrrow d-arrow"
               >
-                <b>Colocation</b>
+                Hybrid Cloud
               </a>
             </div>
-          </div>{" "}
-          <div className="px-5 py-2 text-justify">
-            {/* <h5 className="lineHeight-24 text-center">
-              You can now be able to leverage some of the existing low-cost
-              cloud solutions without compromising your security.
-            </h5> */}
           </div>
+        </div>
+        <div className="container-fluid">
+          <div className="px-5 py-2 text-justify"></div>
           <div className="">
             <Row className="position-relative">
               <div className="">
                 <Nav vertical className="tabList">
                   <NavItem className="one">
                     <span>
-                      <img src={USB} />
+                      <img src={UHC} alt="" />
                     </span>
                     <NavLink
                       id="bgL"
@@ -242,7 +172,7 @@ export class Hybridcloud extends React.Component {
                   </NavItem>
                   <NavItem className="one">
                     <span>
-                      <img src={TV} />
+                      <img src={GSHC} alt="" />
                     </span>
                     <NavLink
                       id="bgLL"
@@ -258,7 +188,7 @@ export class Hybridcloud extends React.Component {
                   </NavItem>
                   <NavItem className="one">
                     <span>
-                      <img src={USB} />
+                      <img src={HSCH} atl="" />
                     </span>
                     <NavLink
                       id="bgLLL"
@@ -272,9 +202,25 @@ export class Hybridcloud extends React.Component {
                       HOW SYNECTIKS CAN HELP
                     </NavLink>
                   </NavItem>
+                  <NavItem className="one">
+                    <span>
+                      <img src={SD} alt="" />
+                    </span>
+                    <NavLink
+                      id="bgLLL"
+                      className={classnames({
+                        active: this.state.activeTab === "4",
+                      })}
+                      onClick={() => {
+                        this.toggle("4")
+                      }}
+                    >
+                      SYNECTIKS DIFFERENTIATOR
+                    </NavLink>
+                  </NavItem>
                 </Nav>
               </div>
-              <Col className="hPtabs">
+              <Col className="hPtabs mb-3">
                 <TabContent activeTab={this.state.activeTab}>
                   <TabPane tabId="1">
                     <div>
@@ -288,155 +234,141 @@ export class Hybridcloud extends React.Component {
                           />
                           {/* </div>
                         <div className="hp ml-5"> */}
-                          <h1>What is a Hybrid Cloud?</h1>
+                          <h2>Why Hybrid Cloud?</h2>
+                          <h4>Public, Private, and Hybrid Clouds</h4>
                           <p>
-                            As enterprise information shifts into the cloud and
-                            out to smart devices and “things” organizations need
-                            new strategies that enable IT to work in harmony
-                            with resources on-premises, in the cloud and at the
-                            edge. A hybrid cloud (the use of both on-premises
-                            and cloud resources), allows IT organizations to
-                            optimize the performance and costs of every
-                            application, project and system in either the cloud,
-                            on-premises datacenters, or a combination of both.
-                            Organizations are increasingly looking for ways to
-                            automate and control the movement of workloads
-                            between private and public clouds. With automated,
-                            repeatable processes, IT can now seamlessly move
-                            between cloud services to take advantage of cost
-                            savings and resource availability.
+                            Public cloud is what people think of when they hear
+                            the word “cloud.” It’s ideal for application
+                            development, scientific data processing, and
+                            web-scale applications. On the downside, SLAs can be
+                            weak and security can be limited. Exclusive use of
+                            the public cloud becomes less economically feasible
+                            as usage scales. Once applications hit a certain
+                            usage/cost threshold, or have strict requirements,
+                            such as security or data protec¬tion, that cannot be
+                            met by the public cloud, organizations often
+                            consider a private cloud. IT favors the private
+                            cloud for core enterprise security; applications run
+                            on infrastructure that is solely assigned to your
+                            company and that facilitates auditing and
+                            compliance. The reality is that most organizations
+                            will need a blend of these options for different
+                            purposes. This is referred to as a hybrid cloud. It
+                            allows organizations to use the public cloud where
+                            it makes sense, to create private clouds to sup¬port
+                            certain application types, and to use advanced
+                            techniques such as cloud hubbing—situating critical
+                            hardware in network data centers in close proximity
+                            to telecom providers, content distribution networks,
+                            and application component providers—to place their
+                            applications optimally to ensure rapid response
+                            time. Hybrid cloud automates and modernizes the
+                            applications estate, places workloads in their
+                            optimal location, embeds security, enables an IT
+                            brokerage model and creates a simple, agile,
+                            on-demand environment. Hybrid Cloud also lays the
+                            foundation for embracing new technologies such as
+                            containerization , serverless, platform as a service
+                            (PaaS), IoT and edge computing — all with an eye
+                            toward improving business outcomes.
                           </p>
                         </div>
                       </div>
-
-                      <h2>Why Hybrid Cloud?</h2>
-                      <h3>Public, Private, and Hybrid Clouds</h3>
-                      <p>
-                        public cloud is what people think of when they hear the
-                        word “cloud.” It’s ideal for application development,
-                        scientific data processing, and web-scale applications.
-                        On the downside, SLAs can be weak and security can be
-                        limited. Exclusive use of the public cloud becomes less
-                        economically feasible as usage scales. Once applications
-                        hit a certain usage/cost threshold, or have strict
-                        requirements, such as security or data protec¬tion, that
-                        cannot be met by the public cloud, organizations often
-                        consider a private cloud. IT favors the private cloud
-                        for core enterprise security; applications run on
-                        infrastructure that is solely assigned to your company
-                        and that facilitates auditing and compliance. The
-                        reality is that most organizations will need a blend of
-                        these options for different purposes. This is referred
-                        to as a hybrid cloud. It allows organizations to use the
-                        public cloud where it makes sense, to create private
-                        clouds to sup¬port certain application types, and to use
-                        advanced techniques such as cloud hubbing—situating
-                        critical hardware in network data centers in close
-                        proximity to telecom providers, content distribution
-                        networks, and application component providers—to place
-                        their applications optimally to ensure rapid response
-                        time. Hybrid cloud automates and modernizes the
-                        applications estate, places workloads in their optimal
-                        location, embeds security, enables an IT brokerage model
-                        and creates a simple, agile, on-demand environment.
-                        Hybrid Cloud also lays the foundation for embracing new
-                        technologies such as containerization , serverless,
-                        platform as a service (PaaS), IoT and edge computing —
-                        all with an eye toward improving business outcomes.
-                      </p>
                     </div>
-                    <h3>Key Drivers forHybrid cloud adoption is:</h3>
-                    <div className="">
-                      <div className="my-3 d-flex flex-row justify-content-around align-items-center">
-                        <img src={AI} alt="" className="w15" />
-                        <p className="marHybrid">
-                          Experiment with new ideas on the cloud. Build once and
-                          run anywhere. With secure, easily managed, low-cost
-                          cloud resources, companies can finally break the
-                          6-to-18-month application development cycle. Many
-                          businesses take advantage of the initial low cost and
-                          speed of provisioning servers in the cloud to test new
-                          applications, then move production apps to a private
-                          or hybrid cloud for better performance and cost
-                          savings.
+                    <div className="shadow p-4">
+                      <h3>Key Drivers for Hybrid cloud adoption is:</h3>
+                      <div className="">
+                        <div className="my-3 d-flex flex-row justify-content-around align-items-center">
+                          <img src={AI} alt="" className="w15" />
+                          <p className="marHybrid">
+                            Experiment with new ideas on the cloud. Build once
+                            and run anywhere. With secure, easily managed,
+                            low-cost cloud resources, companies can finally
+                            break the 6-to-18-month application development
+                            cycle. Many businesses take advantage of the initial
+                            low cost and speed of provisioning servers in the
+                            cloud to test new applications, then move production
+                            apps to a private or hybrid cloud for better
+                            performance and cost savings.
+                          </p>
+                        </div>
+                        <div className="my-3 d-flex flex-row justify-content-around align-items-center">
+                          <img src={RC} alt="" className="w15" />
+                          <p className="marHybrid">
+                            Choose the best cloud to meet cost, performance,
+                            regulatory, or data governance requirements.
+                            Organizations that demand greater operational
+                            flexibility and scalability, data that needs to stay
+                            on-premises for compliance reasons can remain in
+                            your data center, while application development and
+                            testing, HPC, and capacity can take place in the
+                            cloud. Also, a hybrid cloud environment allows for
+                            “bursting,” or the temporary allocation of cloud
+                            capacity for short periods, at a lower cost than
+                            using physical and owned IT resources. This helps
+                            prevent over-provisioning and resource abandonment
+                            when the instances (virtual servers in the cloud)
+                            are no longer needed.
+                          </p>
+                        </div>
+                        <div className="my-3 d-flex flex-row justify-content-around align-items-center">
+                          <img src={BCC} alt="" className="w15" />
+                          <p className="marHybrid">
+                            Choose the best cloud to meet cost, performance,
+                            regulatory, or data governance requirements.
+                            Organizations that demand greater operational
+                            flexibility and scalability, data that needs to stay
+                            on-premises for compliance reasons can remain in
+                            your data center, while application development and
+                            testing, HPC, and capacity can take place in the
+                            cloud. Also, a hybrid cloud environment allows for
+                            “bursting,” or the temporary allocation of cloud
+                            capacity for short periods, at a lower cost than
+                            using physical and owned IT resources. This helps
+                            prevent over-provisioning and resource abandonment
+                            when the instances (virtual servers in the cloud)
+                            are no longer needed.
+                          </p>
+                        </div>
+                        <div className="my-3 d-flex flex-row justify-content-around align-items-center">
+                          <img src={EVL} alt="" className="w15" />
+                          <p className="marHybrid">
+                            Reduce dependency on proprietary services,
+                            application tools, and cloud providers. To support
+                            global delivery, companies are paying increasing
+                            attention to the network performance from their end
+                            users back to the applications being con¬sumed.
+                            Placing application servers close to the customer
+                            and directly connecting with relevant networks helps
+                            to ensure an optimal end-user experience.
+                          </p>
+                        </div>
+                        <p>
+                          Ultimately, a hybrid IT environment enables a whole
+                          new style of execution characterized by collaborative
+                          development environments, consumer-controlled
+                          personalized experiences, a cloud-first strategy, and
+                          data-driven decisions arrived at with the help of
+                          machine learning & AI.
+                          <br /> <br /> For example, in a manufacturing
+                          scenario, data from IoT sensors monitoring the
+                          performance of machines on the factory floor can be
+                          ingested using an edge computing infrastructure. Data
+                          analytics is first performed locally; then the data is
+                          transferred to a data lake in a cloud environment
+                          where advanced analytics, AI and machine learning are
+                          applied to larger data sets to gain critical insights.
+                          These insights can be used to automatically initiate
+                          actions in production & supply chain systems that
+                          execute in a traditional infrastructure environment.
+                          The hybrid IT components are managed in an integrated
+                          fashion to deliver the end-to-end business processes.
+                          <br /> <br /> As these examples demonstrate, the
+                          potential benefits of hybrid IT are compelling, yet
+                          there are notable challenges facing CIOs as they work
+                          to embrace or accelerate hybrid cloud.
                         </p>
                       </div>
-                      <div className="my-3 d-flex flex-row justify-content-around align-items-center">
-                        <img src={RC} alt="" className="w15" />
-                        <p className="marHybrid">
-                          Choose the best cloud to meet cost, performance,
-                          regulatory, or data governance requirements.
-                          Organizations that demand greater operational
-                          flexibility and scalability, data that needs to stay
-                          on-premises for compliance reasons can remain in your
-                          data center, while application development and
-                          testing, HPC, and capacity can take place in the
-                          cloud. Also, a hybrid cloud environment allows for
-                          “bursting,” or the temporary allocation of cloud
-                          capacity for short periods, at a lower cost than using
-                          physical and owned IT resources. This helps prevent
-                          over-provisioning and resource abandonment when the
-                          instances (virtual servers in the cloud) are no longer
-                          needed.
-                        </p>
-                      </div>
-                      <div className="my-3 d-flex flex-row justify-content-around align-items-center">
-                        <img src={BCC} alt="" className="w15" />
-                        <p className="marHybrid">
-                          Choose the best cloud to meet cost, performance,
-                          regulatory, or data governance requirements.
-                          Organizations that demand greater operational
-                          flexibility and scalability, data that needs to stay
-                          on-premises for compliance reasons can remain in your
-                          data center, while application development and
-                          testing, HPC, and capacity can take place in the
-                          cloud. Also, a hybrid cloud environment allows for
-                          “bursting,” or the temporary allocation of cloud
-                          capacity for short periods, at a lower cost than using
-                          physical and owned IT resources. This helps prevent
-                          over-provisioning and resource abandonment when the
-                          instances (virtual servers in the cloud) are no longer
-                          needed.
-                        </p>
-                      </div>
-                      <div className="my-3 d-flex flex-row justify-content-around align-items-center">
-                        <img src={EVL} alt="" className="w15" />
-                        <p className="marHybrid">
-                          Reduce dependency on proprietary services, application
-                          tools, and cloud providers. To support global
-                          delivery, companies are paying increasing attention to
-                          the network performance from their end users back to
-                          the applications being con¬sumed. Placing application
-                          servers close to the customer and directly connecting
-                          with relevant networks helps to ensure an optimal
-                          end-user experience.
-                        </p>
-                      </div>
-                      <p>
-                        Ultimately, a hybrid IT environment enables a whole new
-                        style of execution characterized by collaborative
-                        development environments, consumer-controlled
-                        personalized experiences, a cloud-first strategy, and
-                        data-driven decisions arrived at with the help of
-                        machine learning & AI.
-                        <br /> <br /> For example, in a manufacturing scenario,
-                        data from IoT sensors monitoring the performance of
-                        machines on the factory floor can be ingested using an
-                        edge computing infrastructure. Data analytics is first
-                        performed locally; then the data is transferred to a
-                        data lake in a cloud environment where advanced
-                        analytics, AI and machine learning are applied to larger
-                        data sets to gain critical insights. These insights can
-                        be used to automatically initiate actions in production
-                        & supply chain systems that execute in a traditional
-                        infrastructure environment. The hybrid IT components are
-                        managed in an integrated fashion to deliver the
-                        end-to-end business processes.
-                        <br /> <br /> As these examples demonstrate, the
-                        potential benefits of hybrid IT are compelling, yet
-                        there are notable challenges facing CIOs as they work to
-                        embrace or accelerate hybrid cloud.
-                      </p>
                       <h3>Hybrid Cloud Challenges</h3>
                       <p>
                         Migration of workloads and integration between the
@@ -543,11 +475,15 @@ export class Hybridcloud extends React.Component {
                       </div>
 
                       <div className="text-center">
-                        <img src={scr} alt="" />
+                        <img src={scr} className='imgBx' alt="" />
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
-                          <img src={ADT} alt="" className="whbd7 mr-3 my-3" />
+                          <img
+                            src={ADT}
+                            alt=""
+                            className="whbd7 mr-3 my-3 b-1"
+                          />
                           <h4>Application Development and Testing</h4>
                         </div>
                         <p>
@@ -580,11 +516,15 @@ export class Hybridcloud extends React.Component {
                         </p>
                       </div>
                       <div className="text-center">
-                        <img src={SCR5} alt="" />
+                        <img src={SCR5} className='imgBx' alt="" />
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
-                          <img src={ETL} alt="" className="whbd7 mr-3 my-3" />
+                          <img
+                            src={ETL}
+                            alt=""
+                            className="whbd7 mr-3 my-3 b-1"
+                          />
                           <h4>
                             Data Extract, Transform, and Load (ETL) processes
                           </h4>
@@ -672,6 +612,7 @@ export class Hybridcloud extends React.Component {
                   </TabPane>
                   <TabPane tabId="2">
                     <div>
+                      <h2>GETTING STARTED TO HYBRID CLOUD</h2>
                       <p>
                         The first step is for CIOs to connect with the business
                         to establish clear lines of communication and to set
@@ -809,6 +750,7 @@ export class Hybridcloud extends React.Component {
                   </TabPane>
                   <TabPane tabId="3">
                     <div>
+                      <h2>HOW SYNECTIKS CAN HELP</h2>
                       <p className="py-4">
                         Synectiks can enable your enterprise journey to hybrid
                         IT, regardless of your starting point.
@@ -870,6 +812,10 @@ export class Hybridcloud extends React.Component {
                           </cite>
                         </footer>
                       </blockquote>
+                    </div>
+                  </TabPane>
+                  <TabPane tabId="4">
+                    <div>
                       <div className="my-3">
                         <h3>
                           <b>Synectiks</b> Differentiator
@@ -1050,30 +996,6 @@ export class Hybridcloud extends React.Component {
               </Col>
             </Row>
           </div>
-          {/* <div className="w-100 p-5 text-black text-justify">
-            <p className="lineHeight-24">
-              Begin your journey with SYNECTIKS Hybrid Cloud.
-              <a
-                className="navlink navfont noLine text-logoblue cursPoint"
-                onClick={this.toggle}
-              >
-                <small> Contact&nbsp;Us&nbsp;</small>
-              </a>
-              to learn more.
-              <br />{" "}
-            </p>
-          </div>
-
-          <div className="">
-            <Modal isOpen={this.state.modal} toggle={this.toggle}>
-              <ModalHeader className="bg-lightgrey" toggle={this.toggle}>
-                Contact Us
-              </ModalHeader>
-              <ModalBody className="bg-lightgrey brdr-btm-030">
-                <ModalContact />
-              </ModalBody>
-            </Modal>
-          </div> */}
         </div>
         <Helmet>
           <script
