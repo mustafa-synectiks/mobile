@@ -529,6 +529,29 @@ a.dropdown-toggle.nav-link {
 }
 
 @media (max-width: 576px) {
+  ul.tabList.nav.flex-column > li > a {
+    width: 22rem !important;
+    color: rgba(0, 0, 0, 0.8);
+    height: 10vh;
+    -webkit-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+    font-size: 12px;
+    cursor: pointer;
+    padding-left: 3.1rem;
+  }
+ .tab-content {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: justify;
+}
+  ul.tabList.nav.flex-column {
+    position: relative;
+    z-index: 99999;
+    width: 24.7rem !important;
+  }
+  .himage{
+    width:16rem
+  }
   main {
     margin-top: 6.6rem;
   }
@@ -577,7 +600,7 @@ a.dropdown-toggle.nav-link {
   .bg-top {
     background: #117dc2 !important;
     padding-right: 1rem !important;
-    height: 6vh;
+    height: 7vh;
   }
   .carousel-indicators {
     position: absolute;

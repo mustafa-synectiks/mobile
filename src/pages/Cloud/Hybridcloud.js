@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet"
 import Layout from "../../components/layout"
 import CloudCommon from "../../images/CloudCommon.png"
 import HybridCloud from "../../images/HybridCloud.jpg"
+import './hybrid.css'
 import {
   TabContent,
   TabPane,
@@ -227,7 +228,7 @@ export class Hybridcloud extends React.Component {
                       <div className=" ">
                         <div className="w-100 ">
                           <img
-                            className="himage"
+                            className="himage w-100"
                             height="auto"
                             src={HybridCloud}
                             alt="Hybrid Cloud"
