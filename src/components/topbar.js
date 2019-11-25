@@ -1,40 +1,34 @@
-import React from "react"
-import Social from "./social-icons"
-import { FaEnvelope } from "react-icons/fa"
+import React from 'react';
+import Social from './social-icons';
+import { FaEnvelope } from 'react-icons/fa';
 
 const Topbar = () => {
-  return (
-    <div className="">
-      <a href="/contactus/index.html" className="ml-4 ms-ml-0 topCont">
-        CONTACT
-      </a>
-      <small className="text-white topFont py-2 px-4 ml-4  py-md-2 px-md-4 ml-md-4 tbl tbr">
-        <strong>QUESTIONS? &emsp; 609 608 0429 X 102</strong>
-      </small>
-      <span className="tbr py-2 px-4 mx-4 mx-md-0 pr-4 pr-md-4 py-md-2 mr-md-4">
-        <FaEnvelope className="social mr-1" />
-        <small className="text-white topFont">
-          <strong>info@synectiks.com</strong>
-        </small>
-      </span>
-      {Social.map((item, index) => {
-        return (
-          <a
-            key={index}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-1"
-          >
-            {item.icon}
-          </a>
-        )
-      })}
-    </div>
-  )
-}
+	return (
+		<div className=''>
+			<a href='/contactus/index.html' className='ml-4 ms-ml-0 topCont'>
+				CONTACT
+			</a>
+			<small className='topFont py-2 px-4 ml-4  py-md-2 px-md-4 ml-md-4 tbl tbr'>
+				<strong>QUESTIONS? &emsp; 609 608 0429 X 102</strong>
+			</small>
+			<span className='tbr py-2 px-4 mx-4 mx-md-0 pr-4 pr-md-4 py-md-2 mr-md-4'>
+				<FaEnvelope className='social mr-1' />
+				<small className='text-white topFont'>
+					<strong>info@synectiks.com</strong>
+				</small>
+			</span>
+			{Social.map((item, index) => {
+				return (
+					<a key={index} href={item.url} target='_blank' rel='noopener noreferrer' className='mx-1'>
+						{item.icon}
+					</a>
+				);
+			})}
+		</div>
+	);
+};
 
-export default Topbar
+export default Topbar;
 
 // import React from "react"
 // import Social from "./social-icons"

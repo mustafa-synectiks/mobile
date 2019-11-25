@@ -84,7 +84,8 @@ export class Hybridcloud extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="bg-lightgrey container">
+         <div className="mt-2 pt-3"></div>
+        {/* <div className="bg-lightgrey container">
           <div className=" text-black w-100 text-white flex-col d-flex text-justify">
             <div className="mt-2 pt-3 text-black">
               <div className="d-flex">
@@ -127,8 +128,8 @@ export class Hybridcloud extends React.Component {
               />
             </div>
           </div>
-        </div>
-        <div className="container">
+        </div> */}
+        <div className="container mt-2">
           <div className=" bg-white d-flex justify-content-start align-items-center px-0 flex-col text-center col-md-6">
             <div className="py-3 col-md-6">
               <a
@@ -476,7 +477,7 @@ export class Hybridcloud extends React.Component {
                       </div>
 
                       <div className="text-center">
-                        <img src={scr} className='imgBx' alt="" />
+                        <img src={scr} className='imgBx mimage' alt="" />
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
@@ -517,7 +518,7 @@ export class Hybridcloud extends React.Component {
                         </p>
                       </div>
                       <div className="text-center">
-                        <img src={SCR5} className='imgBx' alt="" />
+                        <img src={SCR5} className='imgBx mimage' alt="" />
                       </div>
                       <div>
                         <div className="d-flex align-items-center">
