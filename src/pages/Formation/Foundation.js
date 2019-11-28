@@ -434,7 +434,22 @@ const Foundation = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            <div className="d-flex justify-content-start align-items-center mt-5 pb-5 flex-col">
+            <div className="d-flex justify-content-around align-items-center mt-5 pb-5 flex-col">
+              <div className="">
+                <a
+                  href="https://www.youtube.com/channel/UChsy8OZwS-JpNQUpC24ff2g/videos"
+                  target="_blank"
+                  aria-hidden="true"
+                  rel="noopener noreferer"
+                >
+                  <img
+                    className="imgBx"
+                    src={Video}
+                    width="80%"
+                    alt="Synectiks Enterprise Transformtaion"
+                  />{" "}
+                </a>
+              </div>
               <div className="text-group  align-self-center">
                 <h4 className="font-weight-bold pt-3">
                   Synectiks&nbsp;Enterprise Transformtaion{" "}
@@ -444,7 +459,6 @@ const Foundation = () => {
                   Industry.
                 </p>
               </div>
-
             </div>
           </div>
         </div>

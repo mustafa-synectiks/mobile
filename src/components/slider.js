@@ -170,8 +170,10 @@ const Slider = () => {
 						</h3>
 					</div>
 
-					<div className='row' data-aos='fade-up' data-aos-duration='2000'>
-						<a href='/softwaredefined/index.html' className='noLine col-sm-12 col-md-4 my-3'>
+					<div className='row'>
+						<a
+							href='/softwaredefined/index.html'
+							className='noLine col-sm-12 col-md-4 col-lg-4 col-xl-4 my-3'>
 							<div className='p-sm-0 py-md-2'>
 								<div className='border-grey-2px cs_boxshadow'>
 									<div className='img_zoom'>
@@ -189,7 +191,7 @@ const Slider = () => {
 								</div>
 							</div>
 						</a>
-						<a href='/realtime/index.html' className='noLine wcol-sm-12 col-md-4 my-3'>
+						<a href='/realtime/index.html' className='noLine col-sm-12 col-md-4 col-lg-4 col-xl-4 my-3'>
 							<div className='p-sm-0 py-md-2'>
 								<div className='border-grey-2px cs_boxshadow'>
 									<div className='img_zoom'>
@@ -233,8 +235,10 @@ const Slider = () => {
 						</a>
 					</div>
 
-					<div className='row' data-aos='fade-up' data-aos-duration='2000'>
-						<a href='/networkdesign/index.html' className='noLine col-sm-12 col-md-4 my-3'>
+					<div className='row'>
+						<a
+							href='/networkdesign/index.html'
+							className='noLine col-sm-12 col-md-4 col-lg-4 col-xl-4 my-3'>
 							<div className='p-sm-0 py-md-2'>
 								<div className='border-grey-2px cs_boxshadow'>
 									<div className='img_zoom'>
@@ -250,7 +254,7 @@ const Slider = () => {
 								</div>
 							</div>
 						</a>
-						<a href='/storagetier/index.html' className='noLine col-sm-12 col-md-4 my-3'>
+						<a href='/storagetier/index.html' className='noLine col-sm-12 col-md-4 col-lg-4 col-xl-4 my-3'>
 							<div className='p-sm-0 py-md-2'>
 								<div className='border-grey-2px cs_boxshadow'>
 									<div className='img_zoom'>
@@ -266,7 +270,9 @@ const Slider = () => {
 								</div>
 							</div>
 						</a>
-						<a href='/disasterrecovery/index.html' className='noLine col-sm-12 col-md-4 my-3'>
+						<a
+							href='/disasterrecovery/index.html'
+							className='noLine col-sm-12 col-md-4 col-lg-4 col-xl-4 my-3'>
 							<div className='p-sm-0 py-md-2'>
 								<div className='border-grey-2px cs_boxshadow'>
 									<div className='img_zoom'>

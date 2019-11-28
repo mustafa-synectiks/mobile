@@ -5,7 +5,7 @@ import { FaEnvelope } from 'react-icons/fa';
 const Topbar = () => {
 	return (
 		<div className=''>
-			<a href='/contactus/index.html' className='ml-4 ms-ml-0 topCont'>
+			<a href='/contactus/index.html' className='ml-4 ms-ml-0 text-light topCont '>
 				CONTACT
 			</a>
 			<small className='topFont py-2 px-4 ml-4  py-md-2 px-md-4 ml-md-4 tbl tbr'>
@@ -13,7 +13,7 @@ const Topbar = () => {
 			</small>
 			<span className='tbr py-2 px-4 mx-4 mx-md-0 pr-4 pr-md-4 py-md-2 mr-md-4'>
 				<FaEnvelope className='social mr-1' />
-				<small className='text-white topFont'>
+				<small className='text-light topFont'>
 					<strong>info@synectiks.com</strong>
 				</small>
 			</span>
@@ -43,12 +43,12 @@ export default Topbar;
 //             CONTACT
 //           </a>
 //         </li>
-//         <li className="text-white topFont tbl tbr mx-4 px-4 py-1">
+//         <li className="text-light topFont tbl tbr mx-4 px-4 py-1">
 //           <strong>QUESTIONS? &emsp; 609 608 0429 X 102</strong>
 //         </li>
 //         <li className="tbr pr-4 py-1 mr-4">
 //           <FaEnvelope className="social mr-1" />
-//           <span className="text-white topFont">
+//           <span className="text-light topFont">
 //             <strong>info@synectiks.com</strong>
 //           </span>
 //         </li>
