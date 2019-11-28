@@ -12,10 +12,7 @@ const Header = () => {
 	return (
 		<div className='FixedHeader'>
 			<div className='bg-top'>
-				<div class='container d-flex justify-content-end pr-md-4'>
-					{/* <div class="div"></div> */}
-					<Topbar />
-				</div>
+				<Topbar />
 			</div>
 			<Navbar expand='lg' className='z'>
 				<Container>

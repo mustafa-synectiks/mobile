@@ -321,7 +321,7 @@ main {
 .bg-top {
 	background: #117dc2 !important;
 	/* padding-right: 1rem !important; */
-	height: 9vh;
+	height: auto;
 }
 
 .carousel-indicators {
@@ -584,7 +584,7 @@ img.card-hd-img {
 	}
 	.bg-top {
 		background: #117dc2 !important;
-		height: 8vh;
+		height: auto;
 	}
 	.carousel-indicators {
 		position: absolute;
@@ -760,8 +760,8 @@ img.card-hd-img {
 	.bg-top {
 		background: #117dc2 !important;
 		/* padding-right: 1rem !important; */
-		height: 4vh;
-		padding-top: 6px;
+		height: auto;
+		padding-top: 0px;
 	}
 	.fsize08 {
 		font-size: 0.8em !important;
@@ -786,8 +786,8 @@ img.card-hd-img {
 	.bg-top {
 		background: #117dc2 !important;
 		padding-right: 1rem !important;
-		height: 7vh;
-		padding-top: 6px;
+		height: auto;
+		padding-top: 0px;
 	}
 }
 
@@ -805,16 +805,16 @@ img.card-hd-img {
 	.bg-top {
 		background: #117dc2 !important;
 		padding-right: 1rem !important;
-		height: 5vh;
-		padding-top: 6px;
+		height: auto;
+		padding-top: 0px;
 	}
 }
 @media (min-width: 1200px) {
 	.bg-top {
 		background: #117dc2 !important;
 		padding-right: 1rem !important;
-		height: 6vh;
-		padding-top: 6px;
+		height: auto;
+		padding-top: 0px;
 	}
 }
 

@@ -1,75 +1,90 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Social from './social-icons';
 import { FaEnvelope } from 'react-icons/fa';
+import styled from 'styled-components';
 
-const Topbar = () => {
-	return (
-		<div className=''>
-			<a href='/contactus/index.html' className='ml-4 ms-ml-0 text-light topCont '>
-				CONTACT
-			</a>
-			<small className='topFont py-2 px-4 ml-4  py-md-2 px-md-4 ml-md-4 tbl tbr'>
-				<strong>QUESTIONS? &emsp; 609 608 0429 X 102</strong>
-			</small>
-			<span className='tbr py-2 px-4 mx-4 mx-md-0 pr-4 pr-md-4 py-md-2 mr-md-4'>
-				<FaEnvelope className='social mr-1' />
-				<small className='text-light topFont'>
-					<strong>info@synectiks.com</strong>
-				</small>
-			</span>
-			{Social.map((item, index) => {
-				return (
-					<a key={index} href={item.url} target='_blank' rel='noopener noreferrer' className='mx-1'>
-						{item.icon}
+class Topbar extends Component {
+	render() {
+		return (
+			<TopBarWrapper>
+				<div class='one'>
+					<a href='/contactus/index.html' className='text-light'>
+						CONTACT
 					</a>
-				);
-			})}
-		</div>
-	);
-};
+					<h6 className='text-light tbl tbr'>QUESTIONS? &emsp;609 608 0429 X 102</h6>
+				</div>
+				<div className='two'>
+					<h6 className='text-light'>
+						<FaEnvelope className='social mr-1' />info@synectiks.com
+					</h6>
+					<div className='cursor'>
+						{Social.map((item, index) => {
+							return (
+								<a key={index} href={item.url} target='_blank' rel='noopener noreferrer' className=''>
+									{item.icon}
+								</a>
+							);
+						})}
+					</div>
+				</div>
+			</TopBarWrapper>
+		);
+	}
+}
 
 export default Topbar;
 
-// import React from "react"
-// import Social from "./social-icons"
-// import { FaEnvelope } from "react-icons/fa"
-
-// const Topbar = () => {
-//   return (
-//     <div>
-//       <ul className="topbarList">
-//         <li className="py-1">
-//           <a href="/contactus/index.html" className="topCont">
-//             CONTACT
-//           </a>
-//         </li>
-//         <li className="text-light topFont tbl tbr mx-4 px-4 py-1">
-//           <strong>QUESTIONS? &emsp; 609 608 0429 X 102</strong>
-//         </li>
-//         <li className="tbr pr-4 py-1 mr-4">
-//           <FaEnvelope className="social mr-1" />
-//           <span className="text-light topFont">
-//             <strong>info@synectiks.com</strong>
-//           </span>
-//         </li>
-//         <li className="py-1">
-//           {Social.map((item, index) => {
-//             return (
-//               <a
-//                 key={index}
-//                 href={item.url}
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 className="mx-1"
-//               >
-//                 {item.icon}
-//               </a>
-//             )
-//           })}
-//         </li>
-//       </ul>
-//     </div>
-//   )
-// }
-
-// export default Topbar
+const TopBarWrapper = styled.div`
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 5px;
+	padding: 5px 0 0 0;
+	.one,
+	.two {
+		display: flex;
+		justify-content: space-around;
+		-webkit-text-fill-color: white;
+	}
+	/* .one > a {
+		-webkit-text-fill-color: white;
+	} */
+	a,
+	h6 {
+		font-size: 12px;
+	}
+	.cursor {
+		display: flex;
+		justify-content: start;
+		/* cursor: pointer; */
+	}
+	@media (min-width: 768px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 5px 0;
+	}
+	@media (min-width: 992px) {
+		width: 60vw;
+		margin-left: auto;
+		padding: 0;
+	}
+	@media (min-width: 1024px) {
+		width: 50vw;
+		margin-left: auto;
+		margin-right: 7%;
+		.one,
+		.two {
+			display: inline-flex;
+			-webkit-text-fill-color: white;
+		}
+		a,
+		h6 {
+			font-size: 0.9rem;
+			border-right: 1px solid white;
+			padding-top: 3px;
+			padding-bottom: 4px;
+			padding-left: 11px;
+			padding-right: 11px;
+			margin-bottom: 0px;
+		}
+	}
+`;
